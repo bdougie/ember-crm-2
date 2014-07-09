@@ -12,3 +12,16 @@ App.Lead = DS.Model.extend({
 
 })
 
+App.Lead.reopenClass({
+  STATUSES: ['new', 'in progress', 'closed', 'bad']
+})
+
+App.LeadController = Ember.ObjectController.extend({
+
+  actions: {
+    saveChanges: function() {
+      if (this.get('model.isDirty')) this.get('model').save();
+    }
+  }
+
+})
