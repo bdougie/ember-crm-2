@@ -6,7 +6,7 @@ article#lead
     fieldset
       dl
         dt: label First Name:
-        dd: view Ember.Textfield value=model.firstName
+        dd: view Ember.TextField value=model.firstName
 
       dl
         dt: label Last Name:

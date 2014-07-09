@@ -1,37 +1,37 @@
 outlet
 
 unless isEditing
-article#lead
-  h1= model.fullName
-  link-to 'edit' 'lead.edit' model classNames='edit'
+  article#lead
+    h1= model.fullName
+    link-to 'edit' 'lead.edit' model classNames='edit'
 
-  p
-    ' Name:
-    model.fullName
-
-
-  p
-    ' Email:
-    model.email
+    p
+      ' Name:
+      model.fullName
 
 
-  p
-    ' Phone:
-    model.phone
+    p
+      ' Email:
+      model.email
 
-  p
-    label Status:
-    '
-    view Ember.Select content=App.LeadSTATUSES value=model.status
 
-  p
-    label Notes:
-    br
-    view Ember.TextArea value=model.notes
+    p
+      ' Phone:
+      model.phone
 
-  p
-    input type='submit' value='Save Changes' click='saveChanges'
-    if showUnsavedMessage
-      .unsaved unsaved changes
-    if isSaving
-      .saving saving...
+    p
+      label Status:
+      '
+      view Ember.Select content=App.LeadSTATUSES value=model.status
+
+    p
+      label Notes:
+      br
+      view Ember.TextArea value=model.notes
+
+    p
+      input type='submit' value='Save Changes' click='saveChanges'
+      if showUnsavedMessage
+        .unsaved unsaved changes
+      if isSaving
+        .saving saving...

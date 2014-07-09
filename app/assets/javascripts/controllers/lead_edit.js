@@ -11,7 +11,7 @@ App.LeadEditController = Ember.ObjectController.extend({
 
     cancel: function() {
       this.get('model').rollback();
-      this.transitionToRoute('leas');
+      this.transitionToRoute('lead');
     }
   }
 })
